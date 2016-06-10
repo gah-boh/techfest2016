@@ -1,6 +1,7 @@
 import React from 'react';
-
-import { Navbar, NavItem } from 'react-bootstrap';
+import { Navbar, Nav, NavItem } from 'react-bootstrap';
+import { Link } from 'react-router';
+import { LinkContainer } from 'react-router-bootstrap';
 
 export default class AppNavbar extends React.Component {
     render() {
@@ -8,9 +9,17 @@ export default class AppNavbar extends React.Component {
             <Navbar inverse staticTop>
                 <Navbar.Header>
                     <Navbar.Brand>
-                        <a href="/">Chrome Dev Tools Deep Dive</a>
+                        <Link to="/">Chrome Dev Tools Deep Dive</Link>
                     </Navbar.Brand>
                 </Navbar.Header>
+                <Nav>
+                    <LinkContainer to="selectors">
+                        <NavItem>Elements</NavItem>
+                    </LinkContainer>
+                    <LinkContainer to="sources">
+                        <NavItem>Sources</NavItem>
+                    </LinkContainer>
+                </Nav>
             </Navbar>
         );
     }

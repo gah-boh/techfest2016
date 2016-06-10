@@ -14,21 +14,14 @@ module.exports = {
                 include: path.resolve('./app'),
                 loader: 'babel',
                 query: {
-                    presets: ['react', 'es2015']
+                    presets: ['react', 'es2015'],
+                    plugins: ['transform-class-properties', 'transform-object-rest-spread']
                 }
             }
         ]
     },
+    devtool: 'source-map',
     plugins: [
         new WebpackNotifier()
-    ],
-    devServer: {
-        contentBase: path.resolve('./app'),
-        inline: true,
-        port: 9000,
-        stats: {
-            chunks: false,
-            colors: true
-        }
-    }
+    ]
 };

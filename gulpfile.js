@@ -37,6 +37,7 @@ gulp.task('webpack-dev-server', function() {
     new WebpackDevServer(compiler, {
         contentBase: path.resolve('./build'),
         inline: true,
+        historyApiFallback: true,
         stats: {
             chunks: false,
             colors: true
