@@ -19,6 +19,9 @@ export default class AppNavbar extends React.Component {
                     <LinkContainer to="sources">
                         <NavItem>Sources</NavItem>
                     </LinkContainer>
+                    <LinkContainer to="flamegraph">
+                        <NavItem>Flame Graph</NavItem>
+                    </LinkContainer>
                 </Nav>
             </Navbar>
         );

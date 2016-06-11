@@ -6,6 +6,7 @@ import AppNavbar from './containers/app-navbar';
 import Home from './components/home';
 import CSSSelectors from './components/css-selectors';
 import Sources from './containers/sources';
+import FlameGraph from './containers/flame-graph';
 
 class App extends React.Component {
     render() {
@@ -26,6 +27,7 @@ ReactDOM.render((
             <IndexRoute component={Home} />
             <Route path="selectors" component={CSSSelectors} />
             <Route path="sources" component={Sources} />
+            <Route path="flamegraph" component={FlameGraph} />
         </Route>
     </Router>
 ), document.getElementById('app'));
