@@ -7,6 +7,7 @@ import Home from './components/home';
 import CSSSelectors from './components/css-selectors';
 import Sources from './containers/sources';
 import FlameGraph from './containers/flame-graph';
+import Animations from './components/animations';
 
 class App extends React.Component {
     render() {
@@ -28,6 +29,7 @@ ReactDOM.render((
             <Route path="selectors" component={CSSSelectors} />
             <Route path="sources" component={Sources} />
             <Route path="flamegraph" component={FlameGraph} />
+            <Route path="animations" component={Animations} />
         </Route>
     </Router>
 ), document.getElementById('app'));

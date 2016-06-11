@@ -65,3 +65,15 @@
     margin: auto;
     background-color: #80b87b;
 }
+
+.rotating-square {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    background-color: #b3313e;
+    transition: transform 3s linear;
+}
+
+.rotating-square:hover {
+    transform: rotate(720deg);
+}
